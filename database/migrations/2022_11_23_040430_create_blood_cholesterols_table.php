@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('blood_cholesterols', function (Blueprint $table) {
             $table->id();
-            $table->integer('hdl');
-            $table->integer('ldl');
-            $table->integer('total');
-            $table->integer('triglyceride');
-            $table->integer('measurement_unit');
-            $table->string('comparison_to_normal');
+            $table->float('hdl',18,15);
+            $table->float('ldl',18,15);
+            $table->float('total',18,15);
+            $table->float('triglyceride',18,15);
+            $table->string('measurement_unit');
+            $table->integer('comparison_to_normal');
             $table->timestamps();
         });
     }

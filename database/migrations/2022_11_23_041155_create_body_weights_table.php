@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('body_weights', function (Blueprint $table) {
             $table->id();
             $table->integer('weight');
-            $table->integer('measurement_unit');
+            $table->string('measurement_unit');
             $table->timestamps();
         });
     }

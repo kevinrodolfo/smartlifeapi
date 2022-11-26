@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('activities', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->biginteger('calories_burnt');
+            $table->float('calories_burnt',20,10);
             $table->timestamp('end_date')->useCurrent();
             $table->timestamp('start_date')->useCurrent();
             $table->integer('steps');

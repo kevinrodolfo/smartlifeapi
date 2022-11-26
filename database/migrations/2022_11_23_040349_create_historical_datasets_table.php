@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id();
             $table->integer('age');
             $table->timestamp('date');
-            $table->integer('height');
-            $table->integer('weight');
-            $table->integer('total_cholesterol');
-            $table->integer('total_glucose');
-            $table->integer('overall_health');
+            $table->float('height',3,2);
+            $table->float('weight',6,3);
+            $table->float('total_cholesterol',18,15);
+            $table->float('total_glucose',18,15);
+            $table->string('overall_health');
             $table->timestamps();
         });
     }

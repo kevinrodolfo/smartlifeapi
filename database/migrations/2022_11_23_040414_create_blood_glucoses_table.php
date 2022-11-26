@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('blood_glucoses', function (Blueprint $table) {
             $table->id();
-            $table->integer('measurement');
-            $table->integer('measurement_unit');
+            $table->float('measurement',18,15);
+            $table->string('measurement_unit');
             $table->string('context_measurement');
             $table->integer('comparison_to_normal');
             $table->timestamps();

@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('blood_pressures', function (Blueprint $table) {
             $table->id();
-            $table->integer('beats_per_minute');
-            $table->integer('diastolic');
-            $table->integer('systolic');
-            $table->integer('measurement_unit');
+            $table->float('beats_per_minute',18,15);
+            $table->float('diastolic',17,15);
+            $table->float('systolic',17,15);
+            $table->string('measurement_unit');
             $table->integer('comparison_to_normal');
             $table->timestamps();
         });
