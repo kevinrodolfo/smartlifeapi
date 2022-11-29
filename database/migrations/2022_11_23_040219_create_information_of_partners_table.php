@@ -17,8 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 50);
             $table->string('phone_number', 10);
-            $table->string('user_relationship', 20);
-            $table->foreignId('user_id')->constrained('user_profiles');
+            $table->string('profile_picture', 50);
             $table->timestamps();
         });
     }

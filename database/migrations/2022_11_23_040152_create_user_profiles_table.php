@@ -18,9 +18,11 @@ return new class extends Migration
             $table->string('name', 50);
             $table->integer('age');
             $table->string('email', 50);
+            $table->string('profile_picture', 50);
             $table->integer('is_active');
             $table->string('password', 50);
             $table->string('phone_number', 10);
+            $table->foreignId('partner_id')->constrained('information_of_partners');
             $table->timestamps();
 
         });

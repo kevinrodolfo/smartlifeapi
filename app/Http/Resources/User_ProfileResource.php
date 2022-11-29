@@ -20,11 +20,14 @@ class User_ProfileResource extends JsonResource
             'name' => $this->name,
             'age' => $this->age,
             'email' => $this->email,
+            'profile_picture' => $this->profile_picture,
             'is_active' => $this->is_active,
             'password' => $this->password,
             'phone_number' => $this->phone_number,
+            'partner_id' => $this->partner_id,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
+            'user_health_details' => User_Health_DetailResource::collection($this->whenLoaded(relationship:'user_health_details')),
             ];
     }
 }

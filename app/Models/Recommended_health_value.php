@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Blood_cholesterol extends Model
+class Recommended_health_value extends Model
 {
     use HasFactory;
 }

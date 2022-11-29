@@ -15,12 +15,10 @@ return new class extends Migration
     {
         Schema::create('user_health_details', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('blood_cholesterol_id')->constrained('blood_cholesterols');
-            $table->foreignId('blood_glucouse_id')->constrained('blood_glucoses');
-            $table->foreignId('blood_pressure_id')->constrained('blood_pressures');
-            $table->foreignId('body_height_id')->constrained('body_heights');
-            $table->foreignId('body_weight_id')->constrained('body_weights');
-            $table->timestamp('measurement_date');
+            $table->float('beats_per_minute',18,15);
+            $table->float('blood_pressure',18,15);
+            $table->float('moisture',18,15);
+            $table->float('oxygen',5,2);
             $table->foreignId('user_id')->constrained('user_profiles');
             $table->timestamps();
         });

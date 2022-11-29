@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class User_profile extends Model
 {
-    use HasFactory;
+    public function user_health_details(){
+        return $this->hasMany(related: User::class, foreignKey:'user_id');
+    }
 }
