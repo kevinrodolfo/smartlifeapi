@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('recommended_health_values', function (Blueprint $table) {
             $table->id();
             $table->float('beats_per_minute',18,15);
-            $table->float('blodd_pressure',18,15);
+            $table->float('blood_pressure',18,15);
             $table->float('moisture',18,15);
             $table->float('oxygen',5,2);
             $table->timestamps();

@@ -3,10 +3,12 @@ use App\Http\Resources\ActivityResource;
 use App\Http\Resources\User_ProfileResource;
 use App\Http\Resources\Information_Of_PartnerResource;
 use App\Http\Resources\User_Health_DetailResource;
+use App\Http\Resources\Recommended_Health_ValueResource;
 use App\Models\User_Profile;
 use App\Models\Activity;
 use App\Models\Information_of_partner;
 use App\Models\User_health_detail;
+use App\Models\Recommended_health_value;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\UserProfileControllerId;
 use Illuminate\Http\Request;
@@ -82,4 +84,6 @@ Route::get('/healthdetails', [UserProfileController::class, 'index']);
 
 #Route::get('/healthdetails/{id}', [UserProfileControllerId::class, 'index']);
 
- 
+Route::get('/recommendedhealthvalues', function(){
+    return Recommended_health_value::all();
+});
