@@ -21,6 +21,7 @@ class User_Health_DetailResource extends JsonResource
             'blood_pressure' => $this->blood_pressure,
             'heart_rate' => $this->heart_rate,
             'oxygen' => $this->oxygen,
+            'user_id' => $this->user_id,
             #'blood_cholesterols' => Blood_CholesterolResource::collection($this->whenLoaded(relationship:'blood_cholesterols')),
             #'recommended_health_values' => Recommended_Health_ValueResource::collection($this->whenLoaded()),
             'user_profiles' => new User_ProfileResource($userprofile),

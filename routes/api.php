@@ -87,3 +87,7 @@ Route::get('/healthdetails', [UserProfileController::class, 'index']);
 Route::get('/recommendedhealthvalues', function(){
     return Recommended_health_value::all();
 });
+
+Route::get('/healthvalues', function(){
+    return User_health_detail::all();
+});
