@@ -19,7 +19,7 @@ class User_Health_DetailResource extends JsonResource
             'id' => $this->id,
             'beats_per_minute' => $this->beats_per_minute,
             'blood_pressure' => $this->blood_pressure,
-            'moisture' => $this->moisture,
+            'heart_rate' => $this->heart_rate,
             'oxygen' => $this->oxygen,
             #'blood_cholesterols' => Blood_CholesterolResource::collection($this->whenLoaded(relationship:'blood_cholesterols')),
             #'recommended_health_values' => Recommended_Health_ValueResource::collection($this->whenLoaded()),

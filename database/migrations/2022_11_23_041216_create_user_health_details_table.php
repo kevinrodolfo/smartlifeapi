@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->float('beats_per_minute',18,15);
             $table->float('blood_pressure',18,15);
-            $table->float('moisture',18,15);
+            $table->float('heart_rate',18,15);
             $table->float('oxygen',5,2);
             $table->foreignId('user_id')->constrained('user_profiles');
             $table->timestamps();
