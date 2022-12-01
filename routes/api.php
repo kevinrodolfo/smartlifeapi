@@ -91,3 +91,10 @@ Route::get('/recommendedhealthvalues', function(){
 Route::get('/healthvalues', function(){
     return User_health_detail::all();
 });
+
+Route::get('/healthvalues/{id}', function($user_id){
+    $health_details = new User_Health_DetailResource(User_health_detail::where('user_id', 'like', "%{$user_id}%")->get());
+    foreach ($health_details as $health_detail){
+        return $health_detail;
+    }    
+});
